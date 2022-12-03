@@ -7,24 +7,23 @@ OBJECTS = *.o
 run:
 	@./a.out
 
-11: fclean
+d1: fclean
 	@gcc -g $(HEADER) $(UTILS) srcs/d1.c
-	@echo "Compiled 'Day 1, Exercise 1'!"
+	@echo "Compiled 'Day 1, Exercise 1'"
 	@./a.out
 
-21:
-	@gcc -I $(HEADERS) -c srcs/d2.c -o $(EXE)
-	@ar rcs $(NAME) $(OBJECTS)
-	@echo "Compiled 'Day 2, Exercise 1'!"
+d2:
+	@gcc -g $(HEADER) $(UTILS) srcs/d2.c
+	@echo "Compiled 'Day 2, Exercise 1'"
 	@./a.out
 
 clean:
 	@/bin/rm -f $(OBJECTS)
-	@echo "Objects are gone!"
+	@echo "Objects cleared"
 
 fclean: clean
 	@/bin/rm -f $(NAME) a.out
-	@echo "All clean!"
+	@echo "clean"
 
 re: fclean run
 .PHONY: run
