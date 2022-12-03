@@ -12,9 +12,14 @@ d1: fclean
 	@echo "Compiled 'Day 1, Exercise 1'"
 	@./a.out
 
-d2:
+d2: fclean
 	@gcc -g $(HEADER) $(UTILS) srcs/d2.c
 	@echo "Compiled 'Day 2, Exercise 1'"
+	@./a.out
+
+d3: fclean
+	@gcc -g $(HEADER) $(UTILS) srcs/d3.c
+	@echo "Compiled 'Day 3'"
 	@./a.out
 
 clean:
